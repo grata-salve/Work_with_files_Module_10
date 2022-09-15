@@ -13,8 +13,9 @@ public class FileRead {
         try {
             FileReader fileReader = new FileReader(fileName);
             Scanner scanner = new Scanner(fileReader);
-            while (scanner.hasNextLine())
+            while (scanner.hasNextLine()) {
                 strings.add(scanner.nextLine());
+            }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

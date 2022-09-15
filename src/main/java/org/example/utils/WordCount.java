@@ -10,10 +10,14 @@ public class WordCount {
 
         HashMap<String, Integer> wordsFrequency = new HashMap<>();
 
-        for (String s : words)
-            if (wordsFrequency.containsKey(s))
+        for (String s : words) {
+            if (wordsFrequency.containsKey(s)) {
                 wordsFrequency.put(s, wordsFrequency.get(s) + 1);
-            else wordsFrequency.put(s, 1);
+            }
+            else {
+                wordsFrequency.put(s, 1);
+            }
+        }
 
         return wordsFrequency;
     }
